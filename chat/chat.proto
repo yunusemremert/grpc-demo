@@ -8,9 +8,9 @@ service ChatService {
 }
 
 message HelloRequest {
-  string body = 1;
+  string name = 1;
 }
 
 message HelloResponse {
-  string body = 1;
+  string message = 1;
 }
