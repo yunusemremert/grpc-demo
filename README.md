@@ -1,15 +1,22 @@
 ### Dependencies
 
-1. Install the protocol compiler plugins for Go using the following commands:
+1. You will need `protoc` to generate proto buffer code.
 
+```bash
+$ brew install protobuf
+$ protoc --version
 ```
+
+2. Install the protocol compiler plugins for Go using the following commands:
+
+```bash
 $ go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.28
 $ go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.2
 ```
 
-2. Update your `PATH` so that the protoc compiler can find the plugins:
+3. Update your `PATH` so that the protoc compiler can find the plugins:
 
-```
+```bash
 $ export PATH="$PATH:$(go env GOPATH)/bin"
 ```
 
